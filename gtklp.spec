@@ -10,6 +10,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}.src.tar.gz
+# Source0-md5:	cdc88b2ec78e1e0e2d746fe88d226084
 URL:		http://gtklp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
