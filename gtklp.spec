@@ -15,8 +15,6 @@ BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 A gtk frontend to CUPS.
