@@ -21,7 +21,7 @@ Patch0:		%{name}-locale_names.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.10
-BuildRequires:	gtk+2-devel >= 2.4.0
+BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
