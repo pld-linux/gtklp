@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=gtklp
+Comment=A GTK+ frontend to CUPS
+Comment[pl]=Interfejs GTK+ do CUPS
+Icon=gtklp.png
+Exec=gtklp 
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=GTK;System;
