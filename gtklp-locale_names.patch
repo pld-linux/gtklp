@@ -1,0 +1,6 @@
+--- gtklp-0.9r/po/LINGUAS~	Sat Jul 24 01:15:37 2004
++++ gtklp-0.9r/po/LINGUAS	Sat Jul 24 01:15:37 2004
+@@ -1,2 +1,2 @@
+ # Set of available languages
+-cz de en es fr it nl pl ru
++cs de en es fr it nl pl ru
