@@ -2,7 +2,7 @@
 # - icon from project page
 # - .desktop file
 # - integrate non english docs
-Summary:	a gtk frontend to CUPS
+Summary:	A gtk frontend to CUPS
 Summary(pl):	Interfejs gtk do CUPS
 Name:		gtklp
 Version:	0.9n
