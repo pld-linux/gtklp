@@ -9,8 +9,8 @@ Version:	0.9m
 Release:	1
 License:	GPL
 Group:		Applications/Printing
-URL:		http://www.stud.uni-hannover.de/~sirtobi/gtklp/
-Source0:	http://www.stud.uni-hannover.de/~sirtobi/gtklp/files/%{name}-%{version}.src.tar.gz
+Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/gtklp/%{name}-%{version}.src.tar.gz
+URL:		http://gtklp.sourceforge.net/
 BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -19,7 +19,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-a gtk frontend to CUPS.
+A gtk frontend to CUPS.
 
 %description -l pl
 Interfejs gtk do CUPS.
