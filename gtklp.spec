@@ -9,12 +9,13 @@ Version:	0.9m
 Release:	1
 License:	GPL
 Group:		Applications/Printing
-Source0:	ftp://ftp.sourceforge.net/pub/sourceforge/gtklp/%{name}-%{version}.src.tar.gz
+Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}.src.tar.gz
 URL:		http://gtklp.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+-devel >= 1.2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 A gtk frontend to CUPS.
