@@ -1,0 +1,41 @@
+--- gtklp-0.9/Makefile.wiget	Mon Mar 25 07:02:13 2002
++++ gtklp-0.9/Makefile	Mon Mar 25 07:04:40 2002
+@@ -5,6 +5,9 @@
+ CUPSINCBASEDIR=/usr/local/include
+ GTK_CONFIG_PATH=gtk-config
+ CUPS_CONFIG_PATH=cups-config
++CC=gcc
++DEBUG=-g
++STRIP=strip
+ #CCFLAGS=
+ #EXTRA=-R$(CUPSLIBDIR)	#fix lib-paths for Solaris
+ 
+@@ -16,7 +19,7 @@
+ 				 image.c hpgl2.c special.c gtklptab.c file.c lang.h ppd.c black.xpm conflict.xpm \
+ 				 duplex_long.xpm duplex_none.xpm duplex_short.xpm error.xpm info.xpm logo.xpm    \
+ 				 logo2.xpm logo2_k.xpm logo_k.xpm myfault.xpm rarrow.xpm warn.xpm white.xpm
+-	gcc -Wall -g gtklp.c  -o gtklp $(CCFLAGS) $(EXTRA) `$(CUPS_CONFIG_PATH) --cflags`           \
++	$(CC) -Wall $(DEBUG) gtklp.c  -o gtklp $(CCFLAGS) $(EXTRA) `$(CUPS_CONFIG_PATH) --cflags`           \
+ 	 `$(CUPS_CONFIG_PATH) --libs` `$(CUPS_CONFIG_PATH) --ldflags` `$(GTK_CONFIG_PATH) --cflags` `$(GTK_CONFIG_PATH) --libs`
+ 	strip gtklp
+ 
+@@ -24,9 +27,9 @@
+ 								 lang.h config.h gtklpq/gtklpq_exit.xpm gtklpq/gtklpq_hold.xpm gtklpq/gtklpq_move.xpm \
+ 								 gtklpq/gtklpq_prio.xpm gtklpq/gtklpq_release.xpm gtklpq/gtklpq_start_printer.xpm     \
+ 								 gtklpq/gtklpq_stop_job.xpm gtklpq/gtklpq_stop_jobs.xpm gtklpq/gtklpq_stop_printer.xpm
+-	gcc -Wall -g gtklpq/gtklpq.c -o gtklpq/gtklpq $(CCFLAGS) $(EXTRA) $(CCFLAGS) $(EXTRA) `$(CUPS_CONFIG_PATH) --cflags` \
++	$(CC) -Wall $(DEBUG) gtklpq/gtklpq.c -o gtklpq/gtklpq $(CCFLAGS) $(EXTRA) $(CCFLAGS) $(EXTRA) `$(CUPS_CONFIG_PATH) --cflags` \
+ 	 `$(CUPS_CONFIG_PATH) --libs` `$(CUPS_CONFIG_PATH) --ldflags` `$(GTK_CONFIG_PATH) --cflags` `$(GTK_CONFIG_PATH) --libs`
+-	strip gtklpq/gtklpq
++	$(STRIP) gtklpq/gtklpq
+ 
+ clean:
+ 	rm gtklp
+@@ -37,6 +40,6 @@
+ 	./gtklp -D
+ 
+ testit: testit.c
+-	gcc -Wall -g testit.c $(CCFLAGS) $(EXTRA) -L$(CUPSLIBDIR) -I$(CUPSINCBASEDIR) -L/usr/X11R6/lib -lX11 -lcups -o testit `$(GTK_CONFIG_PATH) --cflags` `$(GTK_CONFIG_PATH) --libs`
++	$(CC) -Wall $(DEBUG) testit.c $(CCFLAGS) $(EXTRA) -L$(CUPSLIBDIR) -I$(CUPSINCBASEDIR) -L/usr/X11R6/lib -lX11 -lcups -o testit `$(GTK_CONFIG_PATH) --cflags` `$(GTK_CONFIG_PATH) --libs`
+ 	./testit
+ 
