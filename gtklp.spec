@@ -2,8 +2,8 @@
 # - icon from project page
 # - .desktop file
 # - integrate non english docs
-Summary:	A gtk frontend to CUPS
-Summary(pl):	Interfejs gtk do CUPS
+Summary:	A GTK+ frontend to CUPS
+Summary(pl):	Interfejs GTK+ do CUPS
 Name:		gtklp
 Version:	0.9r
 Release:	2
@@ -20,10 +20,10 @@ BuildRequires:	gtk+2-devel >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A gtk frontend to CUPS.
+A GTK+ frontend to CUPS.
 
 %description -l pl
-Interfejs gtk do CUPS.
+Interfejs GTK+ do CUPS.
 
 %prep
 %setup  -q
