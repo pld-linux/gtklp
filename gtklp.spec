@@ -1,3 +1,9 @@
+# TODO:
+# - automake/autoconf/gettext support
+# - icon from project page
+# - .desktop file
+# - integrate non english docs
+# - send all this improvements to author
 Summary:	a gtk frontend to CUPS
 Name:		gtklp
 Version:	0.9
