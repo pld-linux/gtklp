@@ -5,6 +5,7 @@
 # - integrate non english docs
 # - send all this improvements to author
 Summary:	a gtk frontend to CUPS
+Summary(pl):	Interfejs gtk do CUPS
 Name:		gtklp
 Version:	0.9
 Release:	0.1
@@ -21,8 +22,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-a gtk frontend to CUPS
+a gtk frontend to CUPS.
 
+%description -l pl
+Interfejs gtk do CUPS.
 
 %prep
 %setup  -q
