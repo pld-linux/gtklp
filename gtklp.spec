@@ -5,7 +5,7 @@
 Summary:	a gtk frontend to CUPS
 Summary(pl):	Interfejs gtk do CUPS
 Name:		gtklp
-Version:	0.9m
+Version:	0.9n
 Release:	1
 License:	GPL
 Group:		Applications/Printing
