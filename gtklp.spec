@@ -6,12 +6,13 @@ Summary:	A gtk frontend to CUPS
 Summary(pl):	Interfejs gtk do CUPS
 Name:		gtklp
 Version:	0.9r
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}.src.tar.gz
 # Source0-md5:	1dd7892666ae80ac45ac06813fca18b6
 URL:		http://gtklp.sourceforge.net/
+Patch0:		%{name}-locale_names.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.10
@@ -26,6 +27,9 @@ Interfejs gtk do CUPS.
 
 %prep
 %setup  -q
+%patch0 -p1
+
+mv -f po/{cz,cs}.po
 
 %build
 rm -r missing
