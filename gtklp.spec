@@ -1,6 +1,8 @@
 # TODO:
 # - integrate non english docs
 
+%define	_iconsrc icons_n_logos
+
 Summary:	A GTK+ frontend to CUPS
 Summary(pl):	Interfejs GTK+ do CUPS
 Name:		gtklp
@@ -11,7 +13,7 @@ License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}%{_pre}.src.tar.gz
 # Source0-md5:	5bf25637adac9bd716aa0f4337614da3
-Source1:	http://prdownloads.sourceforge.net/gtklp/icons_n_logos.tar.gz
+Source1:	http://dl.sourceforge.net/gtklp/%{_iconsrc}.tar.gz
 # Source1-md5:	e6e7f46c1b525c6993eaeee0c61fe5d1
 Source3:	%{name}.desktop
 URL:		http://gtklp.sourceforge.net/
@@ -22,7 +24,6 @@ BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+2-devel >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_iconsrc icons_n_logos
 
 %description
 A GTK+ frontend to CUPS.
