@@ -4,7 +4,8 @@ Version:	0.9
 Release:	0.1
 License:	GPL
 Group:		Applications/Printing
-Source0:	%{name}-%{version}.src.tar.gz
+URL:		http://www.stud.uni-hannover.de/~sirtobi/gtklp/
+Source0:	http://www.stud.uni-hannover.de/~sirtobi/gtklp/files/%{name}-%{version}.src.tar.gz
 Patch0:		%{name}-Makefile.patch
 BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+-devel >= 1.2.8
