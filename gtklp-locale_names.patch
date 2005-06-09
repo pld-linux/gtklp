@@ -3,5 +3,5 @@ diff -urN gtklp-1.0pre3.org/po/LINGUAS gtklp-1.0pre3/po/LINGUAS
 +++ gtklp-1.0pre3/po/LINGUAS	2004-11-09 14:48:18.532397440 +0100
 @@ -1,2 +1,2 @@
  # Set of available languages
--ca cht cz de en es fr it ja nl pl pt_BR ru
-+ca cs de en es fr it ja nl pl pt_BR ru
+-ca cht cz de en es fr it ja nl pl pt_BR ru hu chs zh_CN zh_TW
++ca cs de en es fr it ja nl pl pt_BR ru hu chs zh_CN zh_TW
