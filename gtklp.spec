@@ -31,14 +31,13 @@ A GTK+ frontend to CUPS.
 Interfejs GTK+ do CUPS.
 
 %prep
-%setup -q
+%setup -q -a1
 %patch0 -p1
 %patch1 -p1
 
 mv -f po/{cz,cs}.po
 
 %build
-rm -r missing
 %{__aclocal}
 %{__automake}
 %{__autoconf}
@@ -47,7 +46,6 @@ rm -r missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-rm -rf $RPM_BUILD_DIR/%{_iconsrc}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -55,16 +53,14 @@ rm -rf $RPM_BUILD_DIR/%{_iconsrc}
 # this is bogus zh_CN:
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/chs
 
-%find_lang %{name}
-
 install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 install -d $RPM_BUILD_ROOT%{_mandir}/ru/man1
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklp-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklp.1
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklpq-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklpq.1
 install %{SOURCE3} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
-tar zxf %{SOURCE1} -C $RPM_BUILD_DIR
-cd $RPM_BUILD_DIR/%{_iconsrc}
-install %{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
+install %{_iconsrc}/%{name}.png $RPM_BUILD_ROOT%{_pixmapsdir}/%{name}.png
+
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -74,6 +70,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc NEWS TODO USAGE README BUGS AUTHORS ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%{_mandir}/ru/man1/*
+%lang(ru) %{_mandir}/ru/man1/*
 %{_pixmapsdir}/%{name}.png
 %{_desktopdir}/%{name}.desktop
