@@ -46,6 +46,7 @@ mv -f po/{cz,cs}.po
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir},%{_mandir}/ru/man1}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -53,8 +54,6 @@ rm -rf $RPM_BUILD_ROOT
 # this is bogus zh_CN:
 rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/chs
 
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
-install -d $RPM_BUILD_ROOT%{_mandir}/ru/man1
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklp-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklp.1
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklpq-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklpq.1
 install %{SOURCE3} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
