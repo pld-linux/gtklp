@@ -4,7 +4,7 @@
 %define	_iconsrc icons_n_logos
 
 Summary:	A GTK+ frontend to CUPS
-Summary(pl):	Interfejs GTK+ do CUPS
+Summary(pl.UTF-8):   Interfejs GTK+ do CUPS
 Name:		gtklp
 Version:	1.2.1
 Release:	1
@@ -27,7 +27,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A GTK+ frontend to CUPS.
 
-%description -l pl
+%description -l pl.UTF-8
 Interfejs GTK+ do CUPS.
 
 %prep
