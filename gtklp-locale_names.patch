@@ -1,7 +1,6 @@
-diff -urN gtklp-1.2.1/po/LINGUAS gtklp-1.2.1/po/LINGUAS
---- gtklp-1.2.1/po/LINGUAS	2006-02-25 14:47:50.496659520 +0100
-+++ gtklp-1.2.1/po/LINGUAS	2006-02-25 14:48:18.532397440 +0100
+--- gtklp-1.2.4/po/LINGUAS.orig	2007-07-31 08:23:54.000000000 +0200
++++ gtklp-1.2.4/po/LINGUAS	2007-08-16 17:26:51.000000000 +0200
 @@ -1,2 +1,2 @@
  # Set of available languages
--ca cht cz de en es fr it ja nl pl pt_BR ru hu chs zh_CN zh_TW
-+ca cs de en es fr it ja nl pl pt_BR ru hu chs zh_CN zh_TW
+-ca cht cz de en es fr it ja nl pl pt_BR ru hu chs zh_CN zh_TW ca_ES uk_UA
++ca cs de en es fr it ja nl pl pt_BR ru hu zh_CN zh_TW ca_ES uk_UA

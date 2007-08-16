@@ -6,12 +6,12 @@
 Summary:	A GTK+ frontend to CUPS
 Summary(pl.UTF-8):	Interfejs GTK+ do CUPS
 Name:		gtklp
-Version:	1.2.1
-Release:	2
+Version:	1.2.4
+Release:	1
 License:	GPL
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}.src.tar.gz
-# Source0-md5:	374501229e7d1bd9c7f211fc50c51fd5
+# Source0-md5:	fcda79120febca9b617955befa5a4fe3
 Source1:	http://dl.sourceforge.net/gtklp/%{_iconsrc}.tar.gz
 # Source1-md5:	e6e7f46c1b525c6993eaeee0c61fe5d1
 Source3:	%{name}.desktop
@@ -50,9 +50,6 @@ install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir},%{_mandir}/ru/man1}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-# this is bogus zh_CN:
-rm -rf $RPM_BUILD_ROOT%{_datadir}/locale/chs
 
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklp-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklp.1
 mv $RPM_BUILD_ROOT%{_mandir}/man1/gtklpq-ru.1 $RPM_BUILD_ROOT%{_mandir}/ru/man1/gtklpq.1
