@@ -7,8 +7,8 @@ Summary:	A GTK+ frontend to CUPS
 Summary(pl.UTF-8):	Interfejs GTK+ do CUPS
 Name:		gtklp
 Version:	1.2.4
-Release:	1
-License:	GPL
+Release:	2
+License:	GPL v2
 Group:		Applications/Printing
 Source0:	http://dl.sourceforge.net/gtklp/%{name}-%{version}.src.tar.gz
 # Source0-md5:	fcda79120febca9b617955befa5a4fe3
@@ -22,6 +22,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+2-devel >= 2:2.4.0
+Conflicts:	glibc =< 6:2.6.1-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
