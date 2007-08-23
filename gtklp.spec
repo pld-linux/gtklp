@@ -22,7 +22,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	cups-devel >= 1.1.10
 BuildRequires:	gtk+2-devel >= 2:2.4.0
-Conflicts:	glibc =< 6:2.6.1-1
+Conflicts:	glibc <= 6:2.6.1-1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
